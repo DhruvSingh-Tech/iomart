@@ -7,7 +7,7 @@
 
     // --- Configuration ---
     const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const API_URL = IS_LOCAL ? 'https://www.jiomart.com/trex/autoSearch' : '/api/search';
+    const API_URL = IS_LOCAL ? 'https://www.jiomart.com/trex/autoSearch' : '/jioapi/trex/autoSearch';
     const PAGE_SIZE = 50;
     const DEBOUNCE_MS = 500;
 

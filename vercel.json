@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/api/search",
-            "destination": "/api/search"
+            "source": "/jioapi/:path*",
+            "destination": "https://www.jiomart.com/:path*"
         }
     ]
 }
