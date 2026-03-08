@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/OMart — Smart Grocery Search</title>
+    <meta name="description" content="I/OMart — A beautiful, fast grocery search experience. Find the best deals on groceries instantly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Blobs -->
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="app-header">
+        <div class="header-inner">
+            <a href="/" class="logo" id="logo-link">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">I/O</span>
+                <span class="logo-accent">Mart</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <div class="header-tagline">smart grocery search</div>
+        </div>
+    </header>
+
+    <!-- Search Hero Section -->
+    <section id="search-hero" class="search-hero">
+        <div class="search-hero-inner">
+            <h1 class="hero-title">
+                Find <span class="gradient-text">everything</span> you need
+            </h1>
+            <p class="hero-subtitle">Search across thousands of grocery products. Best prices, real-time availability.</p>
+            <div class="search-container" id="search-container">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Search for ghee, milk, snacks, vegetables..."
+                        autocomplete="off"
+                        autofocus
+                    >
+                    <button id="clear-btn" class="clear-btn hidden" aria-label="Clear search">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <button id="search-btn" class="search-btn" aria-label="Search">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Quick search suggestions -->
+                <div class="quick-tags" id="quick-tags">
+                    <button class="tag" data-query="ghee">🧈 Ghee</button>
+                    <button class="tag" data-query="milk">🥛 Milk</button>
+                    <button class="tag" data-query="rice">🍚 Rice</button>
+                    <button class="tag" data-query="chocolate">🍫 Chocolate</button>
+                    <button class="tag" data-query="chips">🥔 Chips</button>
+                    <button class="tag" data-query="coffee">☕ Coffee</button>
+                    <button class="tag" data-query="bread">🍞 Bread</button>
+                    <button class="tag" data-query="paneer">🧀 Paneer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Info Bar -->
+    <div id="results-info" class="results-info hidden">
+        <div class="results-info-inner">
+            <div class="results-count">
+                <span id="results-count-text"></span>
+            </div>
+            <div class="results-sort">
+                <label for="sort-select">Sort:</label>
+                <select id="sort-select">
+                    <option value="relevance">Relevance</option>
+                    <option value="price-low">Price: Low → High</option>
+                    <option value="price-high">Price: High → Low</option>
+                    <option value="discount">Biggest Discount</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <main id="results-grid" class="results-grid"></main>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="loading-state hidden">
+        <div class="loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+        <p class="loading-text">Searching products...</p>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="empty-state hidden">
+        <div class="empty-icon">🔍</div>
+        <h2>No products found</h2>
+        <p>Try searching for something else, like "milk" or "biscuits"</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-state" class="error-state hidden">
+        <div class="error-icon">⚠️</div>
+        <h2>Something went wrong</h2>
+        <p id="error-message">Please try again later.</p>
+        <button id="retry-btn" class="retry-btn">Try Again</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="app-footer" class="app-footer">
+        <p>Built with ❤️ — <strong>I/OMart</strong> is an independent search interface. Not affiliated with JioMart.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
