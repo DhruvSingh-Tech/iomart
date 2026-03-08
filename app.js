@@ -19,7 +19,7 @@
         searchMode: 'PRODUCT_SEARCH_ONLY',
         branch: 'projects/sr-project-jiomart-jfront-prod/locations/global/catalogs/default_catalog/branches/0',
         userInfo: {
-            userId: '2BD00AB5CA897F978E9F737828E096A049A61B3C4C0EDC6AC191A9607ECA4D7E'
+            userId: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
         },
         spellCorrectionSpec: { mode: 'AUTO' },
         queryExpansionSpec: { condition: 'AUTO', pinUnexpandedResults: true }
